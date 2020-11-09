@@ -13,9 +13,16 @@ var resumeRouter = require('./routes/resume');
 var appliedJobRouter = require('./routes/appliedJob');
 var savedResumeRouter = require('./routes/savedResume')
 var app = express();
-app.use(cors({
-    exposedHeaders: ['auth_token'],
-}));
+// 
+app.all('*', function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+  });
+// app.use(cors({
+//     exposedHeaders: ['auth_token'],
+// }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({

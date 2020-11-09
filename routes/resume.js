@@ -25,6 +25,7 @@ router.post('/', varify , varifyJobseeker , resumeValidation, async (req, res, n
          course: req.body.course,
          college_university: req.body.college_university,
          college_university_location: req.body.college_university_location,
+         College_or_University_Id_number: req.body.College_or_University_Id_number,
          education_to_year: req.body.education_to_year,
          education_from_month: req.body.education_from_month,
          education_from_year: req.body.education_from_year,

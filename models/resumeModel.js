@@ -96,14 +96,6 @@ const resumeSchema = new mongoose.Schema ({
         max:255
     }
     ,
-     
-    College_or_University_Id_number : {
-        type:String,
-        required : true,
-        min:3,
-        max:255
-    }
-    ,
     education_from_month : {
         type:String,
         required : true,
